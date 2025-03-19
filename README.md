@@ -52,7 +52,7 @@ Copy
 Edit
 python manage.py migrate
 python manage.py runserver
-## 🚀 Your app is now running at http://127.0.0.1:8000/
+🚀 The app is now running : at http://127.0.0.1:8000/
 
 ## 🧑‍💻 Contributing
 
@@ -76,4 +76,4 @@ Edit
 git push origin feature-name
 Create a Pull Request!
 ## 📜 License
-## 📝 This project is licensed under the MIT License – feel free to modify and update.
+📝 This project is licensed under the MIT License – feel free to modify and update.
