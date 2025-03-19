@@ -1,0 +1,39 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Book a Test Drive{% endblock %}
+
+{% block content %}
+<div class="book-container">
+    <div class="form-box">
+        <h1 class="form-title">Book a Test Drive</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="model">Model:</label>
+                <select id="model" name="model" required>
+                    <option value="Model One">Model One</option>
+                    <option value="Model Two">Model Two</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Test drive date:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            
+            <button type="submit" class="book-btn">Book Now</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

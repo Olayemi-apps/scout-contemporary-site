@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block title %}Scout Electric - Redefining Electric Mobility{% endblock %}
+
+{% block content %}
+    <!-- Fullscreen Background Video -->
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+            <source src="/media/s001.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-content">
+        <h1 class="hero-title">Experience the Future of Electric Driving</h1>
+        <p class="hero-subtitle">Power, innovation, and sustainability in every journey.</p>
+        <div class="cta-buttons">
+            <a href="{% url 'compare_models' %}" class="button">Compare Models</a>
+            <a href="{% url 'book_test_drive' %}" class="button-outline">Book a Test Drive</a>
+        </div>
+    </div>
+{% endblock %}
+

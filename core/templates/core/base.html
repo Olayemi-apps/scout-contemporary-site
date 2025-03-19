@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Scout Electric{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'core/images/logo_s.png' %}" alt="Scout Electric" class="logo">
+            </a>
+        </div>
+          <!-- Burger Menu -->
+        <div class="burger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="{% url 'model_one' %}">Model One</a></li>
+            <li><a href="{% url 'model_two' %}">Model Two</a></li>
+            <li><a href="{% url 'compare_models' %}">Compare</a></li>
+            <li><a href="{% url 'book_test_drive' %}">Book</a></li>
+        </ul>
+
+        <div class="nav-cta">
+            <a href="{% url 'model_one_view' %}" class="nav-button">Explore Model One in 360°</a>
+            <a href="{% url 'model_two_view' %}" class="nav-button">Explore Model Two in 360°</a>
+        </div>
+    </nav>
+
+    <!-- Main Page Content -->
+    <div class="page-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <!-- JavaScript for General Site Functionality -->
+    <script src="{% static 'core/js/dark_mode.js' %}"></script>
+    <script defer src="{% static 'core/js/script.js' %}"></script>
+    <script defer src="{% static 'core/js/lazy_iframe.js' %}"></script>
+
+    <script>
+            function toggleMenu() {
+            const navLinks = document.querySelector(".nav-links");
+            const burger = document.querySelector(".burger-menu");
+
+            // Toggle the "active" class to show/hide the menu
+            navLinks.classList.toggle("active");
+
+            // Animate burger menu transition
+            burger.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>
+

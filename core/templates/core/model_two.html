@@ -1,0 +1,97 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Scout Electric - Model Two{% endblock %}
+
+{% block content %}
+<!-- Background Video -->
+<video autoplay loop muted class="video-background">
+    <source src="{% get_media_prefix %}s002.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+<!-- Model One Info -->
+<div class="model-container">
+    <h1>Introducing the Scout Electric Model Two</h1>
+
+    <p>
+        The **Scout Electric Model One** is engineered for those who demand both performance and efficiency. 
+        Designed with a **rugged yet sophisticated aesthetic**, this SUV combines **cutting-edge electric technology** 
+        with the durability needed for off-road adventures.
+    </p>
+
+    <p>
+        Equipped with a **high-capacity 85 kWh battery**, the Model One delivers a **smooth yet powerful driving experience**, 
+        with instant torque and a **0-60 mph acceleration of just 3.2 seconds**. Whether you're navigating city streets or 
+        exploring remote trails, its **All-Wheel Drive (AWD) system** ensures superior traction and control.
+    </p>
+
+    <!-- Key Features Aligned Horizontally -->
+    <div class="key-specs">
+        <div class="spec-item">
+            🔋 <strong>Battery:</strong> 85 kWh
+        </div>
+        <div class="spec-item">
+            ⚡ <strong>Charge:</strong> Fast DC (0-80% in 30 mins)
+        </div>
+        <div class="spec-item">
+            🚗 <strong>Range:</strong> 300 miles
+        </div>
+    </div>
+
+    <a href="{% url 'model_one' %}" class="cta-button">View Model One</a>
+</div>
+{% endblock %}
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scout Electric - Model Two</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted class="video-background">
+        <source src="{{ MEDIA_URL }}s002.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="content">
+        <h1>Introducing the Scout Electric Model One</h1>
+        <p>Experience the future of electric mobility with cutting-edge performance.</p>
+        <a href="{% url 'model_one' %}" style="color: white; text-decoration: none; background: #0073e6; padding: 10px 20px; border-radius: 5px;">View Model One</a>
+    </div>
+
+</body>
+</html> {% endcomment %}

@@ -1,0 +1,695 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 27, 42, 0.95);
+    padding: 12px 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: auto;
+}
+
+
+
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+
+.nav-links li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #009974;
+}
+
+
+
+/* Logo */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.logo {
+    width: 220px; /* Slightly larger */
+    height: auto;
+    filter: invert(1); /* Ensures it's white */
+}
+
+.nav-cta {
+    display: flex;
+    gap: 15px;
+    margin-right: 40px;
+    padding-left: 10px;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: #0073e6;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.nav-button:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Dark Mode */
+
+/* Default Light Mode (Nothing Changes) */
+body {
+    background-color: #ffffff;
+    color: #333;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* Toggle */
+
+/* Default Navigation Links (Hidden on Mobile) */
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 220px;
+        background: rgba(10, 10, 10, 0.95);
+        box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show when toggled */
+    }
+
+    /* Burger Menu Styling */
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .burger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Burger Menu Open State */
+    .burger-menu.open div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.open div:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Video Background */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+/* Make video responsive */
+.video-container video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensure it covers the whole container */
+}
+
+/* .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+/* Hero Section */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    width: 90%;
+    max-width: 1000px;
+    height: auto;
+    z-index: 2; /* Ensures hero text stays on top */
+}
+
+/* Hero Title */
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    max-width: 900px;
+    margin: 0;
+    padding-bottom: 10px; /* Adds spacing between title and subtitle */
+}
+
+/* Hero Subtitle */
+.hero-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button Styling */
+.button, .button-outline {
+    display: inline-block;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button {
+    background-color: #0073e6;
+    color: white;
+}
+
+.button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+.button-outline {
+    color: white;
+    border: 2px solid white;
+}
+
+.button-outline:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+
+/* Fade-In Effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ensure Content Doesn't Overlap with Navbar */
+body {
+    padding-top: 80px;
+}
+
+/* Mobile Menu Icons */
+.menu-icon {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+.menu-close {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+/* Models page styles */
+
+
+/* Background Video */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Model Container */
+.model-container {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translateY(-50%);
+    text-align: left;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings */
+.model-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Paragraph Styling */
+.model-container p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Key Specs Section */
+.key-specs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.spec-item {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* CTA Button */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #0073e6;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    margin-top: 15px;
+}
+
+.cta-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+
+
+
+/* Compare Models Page */
+.page-active .hero-content {
+    display: block !important;
+}
+
+/* Compare page */
+.compare-page {
+    background: url('/static/core/images/traveler_04.PNG') no-repeat center center fixed;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 0;
+    margin: 0;
+}
+
+/* Ensure hero section aligns properly */
+.compare-hero {
+    text-align: center;
+    width: 100%;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+/* Fix Card Layout */
+.compare-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Fix individual model cards */
+.model-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1B1B1B;
+    border-radius: 12px;
+    padding: 30px;
+    width: 48%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+    min-height: 320px;
+}
+
+/* Ensure all cards have the same height */
+.model-card {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Model Header */
+.model-header {
+    background: #0B1C2E;
+    color: white;
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 3px solid #FF5B00;
+    width: 100%;
+    text-align: center;
+}
+
+/* Model Specs */
+.model-specs {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Call to Action */
+.compare-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.compare-cta .button {
+    background: #0B1C2E;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    border: 2px solid #0B1C2E;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.compare-cta .button:hover {
+    background: #162a42;
+    transform: scale(1.05);
+}
+
+/* Book a Test Drive Page Styling */
+.book-container {
+    background: url('/static/core/images/traveler_05.PNG') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #f2f4f6; 
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #f2f4f6;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1C2C3A; /* Match navbar color */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.book-btn:hover {
+    background-color: #14202B; /* Darker shade for hover */
+}
+
+/* Media Queries for Responsive Design */
+
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 1024px) {
+    .model-container {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .key-specs {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .video-container {
+        height: 100vh; /* Ensure full height */
+    }
+
+    .video-container video {
+        width: auto;
+        height: 100%;
+    }
+
+    .compare-container {
+        flex-wrap: wrap; /* Enables stacking on smaller screens */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .model-container-360 {
+        width: 90%;
+        right: 5%;
+        bottom: 5%;
+        padding: 12px;
+        font-size: 0.9em;
+    }
+    
+    .model-container-360 a.button {
+        font-size: 0.85em;
+        padding: 8px 12px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navbar-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-buttons button {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-close {
+        display: block;
+    }
+
+    .model-info h1 {
+        font-size: 2rem;
+    }
+
+    .spec-list li {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .model-container h1 {
+        font-size: 2rem;
+    }
+
+    .model-container p {
+        font-size: 1rem;
+    }
+
+    .spec-item {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

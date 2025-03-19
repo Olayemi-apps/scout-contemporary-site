@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Compare Scout Electric Models{% endblock %}
+
+{% block content %}
+<!-- Full Page Background -->
+<div class="compare-page">
+    <!-- Hero Section -->
+    <div class="compare-hero">
+        <h1>Scout Electric Model Comparison</h1>
+        <p>Find the perfect balance between performance and efficiency.</p>
+    </div>
+
+    <!-- Model Comparison Section -->
+    <div class="compare-container">
+        <div class="model-card">
+            <div class="model-header">
+                <h2>Model One</h2>
+                <p>Combination of power and range.</p>
+            </div>
+            <div class="model-specs">
+                <p><strong>Range:</strong> 300 miles</p>
+                <p><strong>Top Speed:</strong> 150 mph</p>
+                <p><strong>Acceleration:</strong> 0-60 mph in 3.2s</p>
+                <p><strong>Battery:</strong> 85 kWh</p>
+                <p><strong>Price:</strong> $50,000</p>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <div class="model-header">
+                <h2>Model Two</h2>
+                <p>Unmatched acceleration.</p>
+            </div>
+            <div class="model-specs">
+                <p><strong>Range:</strong> 350 miles</p>
+                <p><strong>Top Speed:</strong> 160 mph</p>
+                <p><strong>Acceleration:</strong> 0-60 mph in 2.9s</p>
+                <p><strong>Battery:</strong> 95 kWh</p>
+                <p><strong>Price:</strong> $60,000</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="compare-cta">
+        <a href="{% url 'book_test_drive' %}" class="button">Book a Test Drive</a>
+    </div>
+</div>
+{% endblock %}
