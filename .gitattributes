@@ -1,7 +1,11 @@
-*.css linguist-generated
-*.js linguist-generated
-*.html linguist-generated
+
+*.py linguist-weight=90
+
+
+*.css linguist-vendored
+*.js linguist-vendored
+*.html linguist-vendored
+
+
 *.json linguist-vendored
 *.lock linguist-vendored
-*.py linguist-weight=80
-
