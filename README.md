@@ -14,7 +14,7 @@
 <ul>
  <li>Frontend: HTML, CSS (Bootstrap & Custom), JavaScript </li>
  <li>Backend: Django, Python  </li>
- <li>Database: SQLite (development), PostgreSQL (production) - TO BE INCLUDED  </li>
+ <li>Database: SQLite (development), PostgreSQL (production) - TO BE INCLUDED  - and set to a new branch</li>
  <li>Version Control: Git & GitHub  </li>  
 </ul>
 
