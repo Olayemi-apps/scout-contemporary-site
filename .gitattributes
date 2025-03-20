@@ -1,2 +1,1 @@
-*.json linguist-vendored
-*.lock linguist-vendored
+*.py linguist-weight=80
