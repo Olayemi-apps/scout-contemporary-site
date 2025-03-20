@@ -3,5 +3,5 @@
 *.html linguist-generated
 *.json linguist-vendored
 *.lock linguist-vendored
-*.py linguist-weight=100
+*.py linguist-weight=80
 
