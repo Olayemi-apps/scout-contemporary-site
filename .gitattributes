@@ -1,5 +1,5 @@
-*.css linguist-vendored
-*.js linguist-vendored
-*.html linguist-vendored
+*.css linguist-generated
+*.js linguist-generated
+*.html linguist-generated
 *.json linguist-vendored
 *.lock linguist-vendored
